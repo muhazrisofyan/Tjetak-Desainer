@@ -1,0 +1,31 @@
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+    background-color: #e6e6e6;
+}
+
+#header{
+    margin-top:0;
+}
+
+#header>img{
+    width: 220px;
+}
+
+.button{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgimg-1 {
+    background-image: url('../img/a_main_banner/website_banner.jpg');
+    min-height: 100%;
+}
