@@ -2,7 +2,7 @@ body, html {
     height: 100%;
     color: #777;
     line-height: 1.8;
-    background-color: #e6e6e6;
+    background-color: #F5F5F5;
 }
 
 #header{
@@ -10,12 +10,11 @@ body, html {
 }
 
 #header>img{
-    width: 220px;
+    width: 180px;
 }
 
-.button{
-    margin-left: 20px;
-    margin-right: 20px;
+.a-decoration-none{
+    text-decoration: none;
 }
 
 .bgimg-1, .bgimg-2, .bgimg-3 {
@@ -26,6 +25,78 @@ body, html {
 }
 
 .bgimg-1 {
-    background-image: url('../img/a_main_banner/website_banner.jpg');
+    background-image: url('../storage/img/a_main_banner/website_banner.jpg');
     min-height: 100%;
 }
+
+.button{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.product-img-width{
+    width: 90px;
+}
+
+.product-text-middle{
+    line-height:70px;
+}
+
+.margin-top-min20{
+    margin-top:-20px;
+}
+
+.responsive{
+    max-width: 90px;
+    display: block;
+    height: auto;
+
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.width-100{
+  width:100%;
+}
+
+@media screen and (max-width: 600px) {
+    .mobile-center {
+        text-align: center;
+    }
+}
+
+/* fonts */
+@font-face {
+    font-family: 'Banaue'; /*a name to be used later*/
+    src: url('/public/fonts/Banaue-Regular.otf') format('truetype'); /*URL to font*/
+}
+
+.f1{
+    font-family: 'Banaue', sans-serif;
+    font-size: 30px;
+    margin-bottom: -40px;;
+}
+
+/* SourceSansPro-Regular */
+@font-face {
+  font-family: "ssp-regular";
+  src: url('/public/fonts/source-sans-pro/SourceSansPro-Regular.otf') format("truetype");
+}
+.ssp-regular { font-family: "ssp-regular", sans-serif }
+
+/* SourceSansPro-Bold */
+@font-face {
+  font-family: "ssp-bold";
+  src: url('/public/fonts/source-sans-pro/SourceSansPro-Bold.otf') format("truetype");
+}
+.ssp-bold { font-family: "ssp-bold", sans-serif }

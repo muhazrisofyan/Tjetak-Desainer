@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.landingpage');
-});
+Route::get('/','landingPageController@index');
 
 Auth::routes();
 
