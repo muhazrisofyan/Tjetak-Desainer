@@ -29,9 +29,13 @@ body, html {
     min-height: 100%;
 }
 
-.button{
+.c-button{
     margin-left: 20px;
     margin-right: 20px;
+}
+
+.little-spacing-after {
+    line-height: 1em;
 }
 
 .product-img-width{
@@ -42,8 +46,16 @@ body, html {
     line-height:70px;
 }
 
+.margin-right-0{
+    margin-right: 0;
+}
+
 .margin-top-min20{
     margin-top:-20px;
+}
+
+.margin-bottom-min20{
+    margin-bottom:-20px;
 }
 
 .responsive{
@@ -53,7 +65,7 @@ body, html {
 
 }
 
-.text-bold{
+.c-text-bold{
     font-weight: bold;
 }
 
@@ -69,7 +81,12 @@ body, html {
   width:100%;
 }
 
-@media screen and (max-width: 600px) {
+.w3-padding-8{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+@media screen and (max-width: 800px) {
     .mobile-center {
         text-align: center;
     }
