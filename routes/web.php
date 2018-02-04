@@ -18,3 +18,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
+
+Route::get('/confirm', function(){
+    return view('confirm');
+});
+
+Route::get('/confirm2', function(){
+    return view('confirm2');
+});
