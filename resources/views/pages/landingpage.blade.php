@@ -3,10 +3,10 @@
 @section('content')
   {{-- landingpage banner --}}
   <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-    <div class="w3-container w3-display-left w3-row" style="">
-      <div class="ssp-bold w3-col m12 l10 w3-text-white mobile-center">
-        <h1 class="w3-xxlarge w3-animate-left little-spacing-after">Desain dan dapatkan pemasukan tambahan.</h1>
-        <p class="w3-large">Rasakan manfaat menjadi desainer produk percetakan<br> kami dengan pemasukan tambahan
+    <div class="w3-container w3-display-left w3-row">
+      <div class="w3-col m12 l10 w3-text-white mobile-center">
+        <h1 class="ssp-bold w3-xxlarge w3-animate-left little-spacing-after">Desain dan dapatkan pemasukan tambahan.</h1>
+        <p class="ssp-regular w3-large">Rasakan manfaat menjadi desainer produk percetakan<br> kami dengan pemasukan tambahan
         yang kompetitif.</p>
       </div>
     </div>
@@ -59,7 +59,8 @@
         <div class="w3-third w3-padding ssp-regular">
           <a class="a-decoration-none" href="">
             <div class="w3-container w3-card-2 w3-round-large width-100 w3-margin-bottom">
-              <img class="w3-image responsive w3-circle w3-left w3-margin" src={{asset("storage/img/d_produk/") . '/' . explode('/', $file)[3]}} alt="Gambar amplop">
+              <img class="w3-image responsive w3-circle w3-left w3-margin" src={{asset("storage/img/d_produk/") . '/' . explode('/', $file)[3]}}
+               alt={{"Gambar-".substr(explode('/', $file)[3], 0, strlen(explode('/', $file)[3]) - 4)}}>
               <p class="c-text-bold product-text-middle">{{str_replace("-", " ", substr(explode('/', $file)[3], 0, strlen(explode('/', $file)[3]) - 4))}}</p>
             </div>
           </a>

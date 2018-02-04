@@ -10,8 +10,18 @@ body, html {
 }
 
 #header>img{
-    width: 180px;
+    width: 200px;
 }
+
+/* footer */
+a.footerlink:link{
+    color:blue;
+}
+
+a.footerlink:hover{
+    color: black;
+}
+/* End of footer css */
 
 .a-decoration-none{
     text-decoration: none;
@@ -32,6 +42,18 @@ body, html {
 .c-button{
     margin-left: 20px;
     margin-right: 20px;
+}
+
+.c-button-burger {
+    background-color: Transparent;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+.c-link{
+    text-decoration: none;
 }
 
 .little-spacing-after {
@@ -82,8 +104,8 @@ body, html {
 }
 
 .w3-padding-8{
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 @media screen and (max-width: 800px) {
@@ -93,27 +115,83 @@ body, html {
 }
 
 /* fonts */
-@font-face {
-    font-family: 'Banaue'; /*a name to be used later*/
-    src: url('/public/fonts/Banaue-Regular.otf') format('truetype'); /*URL to font*/
-}
-
-.f1{
-    font-family: 'Banaue', sans-serif;
-    font-size: 30px;
-    margin-bottom: -40px;;
-}
 
 /* SourceSansPro-Regular */
 @font-face {
   font-family: "ssp-regular";
-  src: url('/public/fonts/source-sans-pro/SourceSansPro-Regular.otf') format("truetype");
+  src: url('/vendor/fonts/source-sans-pro/SourceSansPro-Regular.otf') format("truetype");
 }
 .ssp-regular { font-family: "ssp-regular", sans-serif }
 
 /* SourceSansPro-Bold */
 @font-face {
   font-family: "ssp-bold";
-  src: url('/public/fonts/source-sans-pro/SourceSansPro-Bold.otf') format("truetype");
+  src: url('/vendor/fonts/source-sans-pro/SourceSansPro-Bold.otf') format("truetype");
 }
 .ssp-bold { font-family: "ssp-bold", sans-serif }
+
+/* End of fonts */
+
+/* Login styles */
+.search {
+  position: relative;
+  color: #ccc;
+  font-size: 1rem;
+}
+
+.search input {
+  height: 32px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.search input { text-indent: 30px;}
+.search i{
+  position: absolute;
+  top: 16px;
+  left: 10px;
+}
+
+.search a{
+  font-size: 13px;
+}
+
+.color-grey{
+    color: #4A4A4A;
+    font-size: 1rem;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ccc;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ccc;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ccc;
+}
+
+.checkbox {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .s-full-box{
+        width: 90%;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .l-third{
+        width: 33.333%;
+        text-align: center;
+    }
+}
+
+/* End of login styles */
