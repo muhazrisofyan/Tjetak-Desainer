@@ -1,6 +1,7 @@
 @extends('auth.layout')
 
 @section('content')
+
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->

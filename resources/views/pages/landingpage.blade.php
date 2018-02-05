@@ -58,7 +58,7 @@
       @foreach ($files as $file)
         <div class="w3-third w3-padding ssp-regular">
           <a class="a-decoration-none" href="">
-            <div class="w3-container w3-card-2 w3-round-large width-100 w3-margin-bottom">
+            <div class="w3-container w3-card-2 w3-round-large w3-image w3-margin-bottom">
               <img class="w3-image responsive w3-circle w3-left w3-margin" src={{asset("storage/img/d_produk/") . '/' . explode('/', $file)[3]}}
                alt={{"Gambar-".substr(explode('/', $file)[3], 0, strlen(explode('/', $file)[3]) - 4)}}>
               <p class="c-text-bold product-text-middle">{{str_replace("-", " ", substr(explode('/', $file)[3], 0, strlen(explode('/', $file)[3]) - 4))}}</p>

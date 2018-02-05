@@ -44,10 +44,6 @@
         </div>
     </div>
 </div> --}}
-<div class="w3-display-container" style="min-height: 100%;">
-  <div class="w3-display-topleft w3-padding-8">
-    <img class="w3-padding" src="{{asset('storage/img/a_main_banner/logo_tjetak_desainer_x1_putih.png')}}" style="width: 200px;">
-  </div>
   <div class="w3-display-middle s-full-box l-third" style="height:auto">
     <h2 class="w3-text-white margin-bottom-min20 ssp-bold">Halo Desainer!</h2>
     <p class="w3-text-white ssp-regular w3-large">Reset Password</p>

@@ -13,14 +13,16 @@
 
 Route::get('/','landingPageController@index');
 
-Auth::routes();
+Route::group(['middleware' => 'verified'], function(){
+  Route::get('/home', 'HomeController@index');
+});
 
-Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();
 
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 Route::get('/confirm', function(){
-    return view('confirm');
+    return view('verification');
 });
 
 Route::get('/confirm2', function(){
