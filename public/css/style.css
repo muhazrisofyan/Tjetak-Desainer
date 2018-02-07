@@ -133,26 +133,26 @@ a.footerlink:hover{
 /* End of fonts */
 
 /* Login styles */
-.search {
+.box {
   position: relative;
   color: #ccc;
   font-size: 1rem;
 }
 
-.search input {
+.box input {
   height: 32px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
 
-.search input { text-indent: 30px;}
-.search i{
+.box input { text-indent: 30px;}
+.box i{
   position: absolute;
   top: 16px;
   left: 10px;
 }
 
-.search a{
+.box a{
   font-size: 13px;
 }
 

@@ -86,7 +86,7 @@
 
 
         {{-- User Name --}}
-        <div class="w3-padding-8 search w3-round">
+        <div class="w3-padding-8 box w3-round">
           <i class="fas fa-user w3-small"></i>
           <input id="user" type="text"  class="width-100" placeholder="Nama Lengkap" name="name" value="{{ old('name') }}" required autofocus>
           @if ($errors->has('email'))
@@ -97,7 +97,7 @@
         </div>
 
         {{-- User Email --}}
-        <div class="w3-padding-8 search w3-round">
+        <div class="w3-padding-8 box w3-round">
           <i class="far fa-envelope w3-small"></i>
           <input id="email" type="email" required class="width-100" placeholder="Email" name="email" value="{{ old('email') }}" required autofocus>
           @if ($errors->has('email'))
@@ -108,9 +108,9 @@
         </div>
 
         {{-- Phone Number --}}
-        <div class="w3-padding-8 search w3-round">
+        <div class="w3-padding-8 box w3-round">
           <i class="fas fa-mobile-alt w3-small"></i>
-          <input id="phone" type="text" name="phone" required class="width-100" placeholder="Nomor Telepon" value="{{ old('phone') }}" required>
+          <input id="phone" type="tel" name="phone" required class="width-100" placeholder="Nomor Telepon" value="{{ old('phone') }}" required>
           @if ($errors->has('phone'))
               <span class="help-block">
                   <strong>{{ $errors->first('password') }}</strong>
@@ -119,7 +119,7 @@
         </div>
 
         {{-- Password --}}
-        <div class="w3-padding-8 search w3-round">
+        <div class="w3-padding-8 box w3-round">
           <i class="fas fa-lock w3-small"></i>
           <input id="password" type="password" name="password" class="width-100" placeholder="Password" value="{{ old('password') }}" required>
           @if ($errors->has('password'))
@@ -130,7 +130,7 @@
         </div>
 
         {{-- Password Confirm --}}
-        <div class="w3-padding-8 search w3-round">
+        <div class="w3-padding-8 box w3-round">
           <i class="fas fa-lock w3-small"></i>
           <input id="password-confirm" type="password" name="password_confirmation" class="width-100" placeholder="Confirm Password" value="{{ old('password') }}" required>
           @if ($errors->has('password'))
@@ -150,4 +150,31 @@
 
   </div>
 </div>
+
+<script type="text/javascript">
+function cek(id, value) {
+
+  if (id == "password") {
+    if (value.length > 0) {
+      document.getElementById(id).nextElementSibling.innerHTML = "";
+      document.getElementById(id).classList.remove("w3-border-red");
+    }
+    else {
+      document.getElementById(id).nextElementSibling.innerHTML = " Field password wajib diisi";
+      document.getElementById(id).classList.add("w3-border-red");
+    }
+  } else
+  if (id == "email") {
+
+    if (value.length > 0) {
+      document.getElementById(id).nextElementSibling.innerHTML = "";
+      document.getElementById(id).classList.remove("w3-border-red");
+    }
+    else {
+      document.getElementById(id).nextElementSibling.innerHTML = " Field email wajib diisi";
+      document.getElementById(id).classList.add("w3-border-red");
+    }
+  }
+}
+</script>
 @endsection

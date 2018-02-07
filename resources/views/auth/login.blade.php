@@ -79,13 +79,16 @@
 
     {{-- White Div containing username and password --}}
     <div class="w3-center w3-padding-large w3-white w3-round-large w3-border ssp-regular" style="width:100%;height:auto;">
-      
+
       <form method="POST" action="{{ route('login') }}">
         {{ csrf_field() }}
         {{-- Username --}}
-        <div class="w3-padding-8 search w3-round">
+        <div class="w3-padding-8 box w3-round">
           <i class="far fa-envelope w3-small"></i>
-          <input id="email" type="email"  class="width-100" placeholder="Email" name="email" value="{{ old('email') }}" required autofocus>
+          <input id="email" type="email"  class="width-100" placeholder="Email" name="email" value="{{ old('email') }}" required onblur="cek(this.id , this.value)" onkeyup="cek(this.id , this.value)">
+          <div class="w3-small w3-text-red width-100" style="text-align:left">
+
+          </div>
           @if ($errors->has('email'))
               <span class="help-block">
                   <strong>{{ $errors->first('email') }}</strong>
@@ -94,9 +97,12 @@
         </div>
 
         {{-- Password --}}
-        <div class="w3-padding-8 search w3-round">
+        <div class="w3-padding-8 box w3-round">
           <i class="fas fa-lock w3-small"></i>
-          <input id="password" type="password" name="password" required class="width-100" placeholder="Password">
+          <input id="password" type="password" name="password" required class="width-100" placeholder="Password" onblur="cek(this.id , this.value)" onkeyup="cek(this.id , this.value)">
+          <span class="w3-left w3-small w3-text-red">
+
+          </span>
           @if ($errors->has('password'))
               <span class="help-block">
                   <strong>{{ $errors->first('password') }}</strong>
@@ -123,6 +129,33 @@
 
   </div>
 </div>
+
+<script type="text/javascript">
+  function cek(id, value) {
+
+    if (id == "password") {
+      if (value.length > 0) {
+        document.getElementById(id).nextElementSibling.innerHTML = "";
+        document.getElementById(id).classList.remove("w3-border-red");
+      }
+      else {
+        document.getElementById(id).nextElementSibling.innerHTML = " Field password wajib diisi";
+        document.getElementById(id).classList.add("w3-border-red");
+      }
+    } else
+    if (id == "email") {
+
+      if (value.length > 0) {
+        document.getElementById(id).nextElementSibling.innerHTML = "";
+        document.getElementById(id).classList.remove("w3-border-red");
+      }
+      else {
+        document.getElementById(id).nextElementSibling.innerHTML = " Field email wajib diisi";
+        document.getElementById(id).classList.add("w3-border-red");
+      }
+    }
+  }
+</script>
 
 
 @endsection
