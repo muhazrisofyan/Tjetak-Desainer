@@ -1,78 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-{{--
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
---}}
-
-
-
-
-
   <div class="w3-display-middle s-full-box l-third" style="height:auto">
     <h2 class="w3-text-white margin-bottom-min20 ssp-bold">Halo Desainer!</h2>
     <p class="w3-text-white ssp-regular w3-large">Mulai Desain dan raih keuntunganmu.</p>
@@ -82,7 +10,7 @@
 
       <form method="POST" action="{{ route('login') }}">
         {{ csrf_field() }}
-        {{-- Username --}}
+        {{-- Email --}}
         <div class="w3-padding-8 box w3-round">
           <i class="far fa-envelope w3-small"></i>
           <input id="email" type="email"  class="width-100" placeholder="Email" name="email" value="{{ old('email') }}" required onblur="cek(this.id , this.value)" onkeyup="cek(this.id , this.value)">
@@ -129,33 +57,4 @@
 
   </div>
 </div>
-
-<script type="text/javascript">
-  function cek(id, value) {
-
-    if (id == "password") {
-      if (value.length > 0) {
-        document.getElementById(id).nextElementSibling.innerHTML = "";
-        document.getElementById(id).classList.remove("w3-border-red");
-      }
-      else {
-        document.getElementById(id).nextElementSibling.innerHTML = " Field password wajib diisi";
-        document.getElementById(id).classList.add("w3-border-red");
-      }
-    } else
-    if (id == "email") {
-
-      if (value.length > 0) {
-        document.getElementById(id).nextElementSibling.innerHTML = "";
-        document.getElementById(id).classList.remove("w3-border-red");
-      }
-      else {
-        document.getElementById(id).nextElementSibling.innerHTML = " Field email wajib diisi";
-        document.getElementById(id).classList.add("w3-border-red");
-      }
-    }
-  }
-</script>
-
-
 @endsection
