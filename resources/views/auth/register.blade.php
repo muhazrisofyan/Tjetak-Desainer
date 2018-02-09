@@ -165,31 +165,4 @@
 
   </div>
 </div>
-
-{{-- <script type="text/javascript">
-// function cek(id, value) {
-//
-//   if (id == "password") {
-//     if (value.length > 0) {
-//       document.getElementById(id).nextElementSibling.innerHTML = "";
-//       document.getElementById(id).classList.remove("w3-border-red");
-//     }
-//     else {
-//       document.getElementById(id).nextElementSibling.innerHTML = " Field password wajib diisi";
-//       document.getElementById(id).classList.add("w3-border-red");
-//     }
-//   } else
-//   if (id == "email") {
-//
-//     if (value.length > 0) {
-//       document.getElementById(id).nextElementSibling.innerHTML = "";
-//       document.getElementById(id).classList.remove("w3-border-red");
-//     }
-//     else {
-//       document.getElementById(id).nextElementSibling.innerHTML = " Field email wajib diisi";
-//       document.getElementById(id).classList.add("w3-border-red");
-//     }
-//   }
-// }
-// </script> --}}
 @endsection

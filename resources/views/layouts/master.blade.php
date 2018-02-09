@@ -12,7 +12,7 @@
   <body>
     {{-- Header --}}
     <div id="header" class="w3-top w3-bar w3-white w3-padding-8 w3-border">
-      <img class="w3-padding w3-hover-opacity" src="{{asset('storage/img/b_tentang_tjetak_desainer/Logo/logo_tjetak_desainer_x1.png')}}" alt="Logo Tjetak">
+      <a href="/"><img class="w3-padding" src="{{asset('storage/img/b_tentang_tjetak_desainer/Logo/logo_tjetak_desainer_x1.png')}}" alt="Logo Tjetak"></a>
         <!-- Float links to the right. Hide them on small screens -->
         <div class="w3-right w3-hide-medium w3-hide-small">
           <a class="w3-btn w3-round w3-border c-button w3-small" href="/login">Masuk Sebagai Desainer</a>
@@ -56,11 +56,14 @@
         </div>
 
         <div class="w3-half w3-text-blue">
+          {{-- footer-right on large screen --}}
           <div class="w3-right w3-hide-small">
             <a class="c-link w3-container w3-cell w3-mobile footerlink" href="#">Tentang Kami</a>
             <a class="c-link w3-container w3-cell w3-mobile footerlink" href="#">Syarat &amp; ketentuan</a>
             <a class="c-link w3-container w3-cell w3-mobile footerlink" href="#">Kebijakan Privasi</a>
           </div>
+
+          {{-- footer-right on small screen --}}
           <div class="text-center w3-hide-medium w3-hide-large">
             <a class="c-link w3-container w3-mobile footerlink" href="#">Tentang Kami</a>
             <a class="c-link w3-container w3-mobile footerlink" href="#">Syarat &amp; ketentuan</a>

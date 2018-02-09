@@ -11,17 +11,17 @@
       <form method="POST" action="{{ route('login') }}">
         {{ csrf_field() }}
         {{-- Email --}}
+        @if ($errors->has('email'))
+            <div class="w3-small w3-text-red width-100" style="text-align:left">
+                <strong>{{ $errors->first('email') }}</strong>
+            </div>
+        @endif
         <div class="w3-padding-8 box w3-round">
           <i class="far fa-envelope w3-small"></i>
           <input id="email" type="email"  class="width-100" placeholder="Email" name="email" value="{{ old('email') }}" required onblur="cek(this.id , this.value)" onkeyup="cek(this.id , this.value)">
           <div class="w3-small w3-text-red width-100" style="text-align:left">
 
           </div>
-          @if ($errors->has('email'))
-              <span class="help-block">
-                  <strong>{{ $errors->first('email') }}</strong>
-              </span>
-          @endif
         </div>
 
         {{-- Password --}}
@@ -31,11 +31,6 @@
           <span class="w3-left w3-small w3-text-red">
 
           </span>
-          @if ($errors->has('password'))
-              <span class="help-block">
-                  <strong>{{ $errors->first('password') }}</strong>
-              </span>
-          @endif
           <a class="w3-right a-decoration-none w3-text-grey" href="{{ route('password.request') }}">Lupa password?</a>
         </div>
 
