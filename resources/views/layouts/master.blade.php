@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
-
   </head>
+  
   <body>
     {{-- Header --}}
     <div id="header" class="w3-top w3-bar w3-white w3-padding-8 w3-border">
@@ -40,7 +40,7 @@
     {{-- End of Content --}}
 
     {{-- Footer --}}
-    <footer>
+    <footer >
       <div id="footer" class="w3-bar w3-white w3-border w3-tiny w3-row w3-padding w3-padding-24">
         <div class="w3-half">
           <div class="w3-row w3-hide-small">

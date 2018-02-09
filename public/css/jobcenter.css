@@ -1,0 +1,25 @@
+#header{
+    margin-top:0;
+}
+
+#header>a>img{
+    width: 200px;
+}
+
+.w3-padding-8{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.c-button{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.a-decoration-none{
+    text-decoration: none;
+}

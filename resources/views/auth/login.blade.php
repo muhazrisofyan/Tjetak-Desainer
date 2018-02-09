@@ -19,6 +19,7 @@
         <div class="w3-padding-8 box w3-round">
           <i class="far fa-envelope w3-small"></i>
           <input id="email" type="email"  class="width-100" placeholder="Email" name="email" value="{{ old('email') }}" required onblur="cek(this.id , this.value)" onkeyup="cek(this.id , this.value)">
+          {{-- div for warning text --}}
           <div class="w3-small w3-text-red width-100" style="text-align:left">
 
           </div>
@@ -28,9 +29,10 @@
         <div class="w3-padding-8 box w3-round">
           <i class="fas fa-lock w3-small"></i>
           <input id="password" type="password" name="password" required class="width-100" placeholder="Password" onblur="cek(this.id , this.value)" onkeyup="cek(this.id , this.value)">
-          <span class="w3-left w3-small w3-text-red">
+          {{-- div for warning text --}}
+          <div class="w3-left w3-small w3-text-red">
 
-          </span>
+          </div>
           <a class="w3-right a-decoration-none w3-text-grey" href="{{ route('password.request') }}">Lupa password?</a>
         </div>
 
