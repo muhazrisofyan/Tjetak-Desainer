@@ -107,9 +107,9 @@
 
           </div>
           @if ($errors->has('email'))
-              <span class="help-block">
+              <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
                   <strong>{{ $errors->first('email') }}</strong>
-              </span>
+              </div>
           @endif
         </div>
 
@@ -121,9 +121,9 @@
 
           </div>
           @if ($errors->has('phone'))
-              <span class="help-block">
-                  <strong>{{ $errors->first('password') }}</strong>
-              </span>
+              <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
+                  <strong>{{ $errors->first('phone') }}</strong>
+              </div>
           @endif
         </div>
 
@@ -135,9 +135,9 @@
 
           </div>
           @if ($errors->has('password'))
-              <span class="help-block">
+              <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
                   <strong>{{ $errors->first('password') }}</strong>
-              </span>
+              </div>
           @endif
         </div>
 
@@ -148,10 +148,10 @@
           <div class="w3-small w3-text-red width-100" style="text-align:left">
 
           </div>
-          @if ($errors->has('password'))
-              <span class="help-block">
-                  <strong>{{ $errors->first('password') }}</strong>
-              </span>
+          @if ($errors->has('password_confirmation'))
+              <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
+                  <strong>{{ $errors->first('password_confirmation') }}</strong>
+              </div>
           @endif
         </div>
 
