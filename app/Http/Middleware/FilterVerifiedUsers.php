@@ -21,7 +21,7 @@ class FilterVerifiedUsers
 
        if (!$user->verified) {
          Auth::logout();
-           return redirect('/login')->withErrors(['Akun belum diverifikasi!']);
+           return redirect('/login')->withErrors(['email' => 'Akun belum diverifikasi!']);
        }
 
        return $next($request);
