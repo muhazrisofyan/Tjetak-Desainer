@@ -12,7 +12,7 @@
         {{ csrf_field() }}
         {{-- Email --}}
         @if ($errors->has('email'))
-            <div class="w3-small w3-text-red width-100" style="text-align:left">
+            <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
                 <strong>{{ $errors->first('email') }}</strong>
             </div>
         @endif
