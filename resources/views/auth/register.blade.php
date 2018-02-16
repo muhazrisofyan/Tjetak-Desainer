@@ -146,14 +146,6 @@
         <div class="w3-padding-8 box w3-round">
           <i class="fas fa-lock w3-small"></i>
           <input id="password-confirm" type="password" name="password_confirmation" class="width-100" placeholder="Confirm Password" value="{{ old('password') }}" required onblur="cek(this.id , this.value)" onkeyup="cek(this.id , this.value)">
-<<<<<<< HEAD
-          {{-- div for warning text --}}
-          <div class="w3-small w3-text-red width-100" style="text-align:left"></div>
-          @if ($errors->has('password'))
-              <span class="help-block">
-                  <strong>{{ $errors->first('password') }}</strong>
-              </span>
-=======
           <div class="w3-small w3-text-red width-100" style="text-align:left">
 
           </div>
@@ -161,7 +153,6 @@
               <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
                   <strong>{{ $errors->first('password_confirmation') }}</strong>
               </div>
->>>>>>> 758b5f51fc0aca4126c2f6b93dca96a713422e21
           @endif
         </div>
 
