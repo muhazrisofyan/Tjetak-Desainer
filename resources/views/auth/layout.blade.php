@@ -418,7 +418,12 @@
         <!-- Float links to the right. Hide them on small screens -->
         <div class="w3-right w3-hide-medium w3-hide-small">
           <a class="w3-btn w3-round w3-border c-button w3-small" href="/login">Masuk Sebagai Desainer</a>
-          <a class="w3-btn w3-round w3-blue w3-border c-button w3-small" href="/register">Daftar Sebagai Desainer</a>
+          <a class="w3-btn w3-round w3-blue w3-border c-button w3-small" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">Logout</a>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              {{ csrf_field() }}
+          </form>
         </div>
 
         {{-- Mobile Dropdown --}}
