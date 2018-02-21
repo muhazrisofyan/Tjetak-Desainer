@@ -76,37 +76,44 @@
 
         <input type="hidden" name="token" value="{{ $token }}">
 
-        {{-- Username --}}
-        <div class="w3-padding-8 search w3-round">
+        {{-- Email --}}
+        <div class="w3-padding-8 box w3-round">
           <i class="far fa-envelope w3-small"></i>
-          <input id="email" type="email"  class="width-100" placeholder="Email" name="email" value="{{ old('email') }}" required autofocus>
+          <input id="email" type="email"  class="width-100" placeholder="Email" name="email" value="{{ old('email') }}" required autofocus onblur="cek(this.id , this.value)" onkeyup="cek(this.id , this.value)">
+          <div class="w3-small w3-text-red width-100" style="text-align:left"></div>
           @if ($errors->has('email'))
-              <span class="help-block">
+
+              <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
                   <strong>{{ $errors->first('email') }}</strong>
-              </span>
+              </div>
           @endif
         </div>
 
+
         {{-- Password --}}
-        <div class="w3-padding-8 search w3-round">
+        <div class="w3-padding-8 box w3-round">
           <i class="fas fa-lock w3-small"></i>
-          <input id="password" type="password" name="password" required class="width-100" placeholder="New Password">
+          <input id="password" type="password" name="password" required class="width-100" placeholder="New Password" onblur="cek(this.id , this.value)" onkeyup="cek(this.id , this.value)">
+          <div class="w3-small w3-text-red width-100" style="text-align:left"></div>
           @if ($errors->has('password'))
-              <span class="help-block">
+
+              <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
                   <strong>{{ $errors->first('password') }}</strong>
-              </span>
+              </div>
           @endif
 
         </div>
 
         {{--Confirm Password --}}
-        <div class="w3-padding-8 search w3-round">
+        <div class="w3-padding-8 box w3-round">
           <i class="fas fa-lock w3-small"></i>
-          <input id="password-confirm" type="password" name="password_confirmation" required class="width-100" placeholder="New Password Confirmation">
+          <input id="password-confirm" type="password" name="password_confirmation" required class="width-100" placeholder="New Password Confirmation" onblur="cek(this.id , this.value)" onkeyup="cek(this.id , this.value)">
+          <div class="w3-small w3-text-red width-100" style="text-align:left"></div>
           @if ($errors->has('password'))
-              <span class="help-block">
+
+              <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
                   <strong>{{ $errors->first('password') }}</strong>
-              </span>
+              </div>
           @endif
 
         </div>

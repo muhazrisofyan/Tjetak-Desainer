@@ -34,9 +34,6 @@
   </head>
   <body>
     <div class="w3-light-grey w3-padding w3-center">
-      {{-- <img class="w3-padding-32" style="width:200px"
-      src="{{asset('storage/img/b_tentang_tjetak_desainer/Logo/logo_tjetak_desainer_x1.png')}}"
-      alt="Logo Tjetak"> --}}
 
       <div class="w3-content w3-white w3-center w3-round-large" style="width:100%;margin-top:32px;margin-bottom:32px">
         <h1 style="padding-top:32px!important;padding-bottom:32px!important">Email Verfication</h1>

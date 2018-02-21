@@ -14,7 +14,7 @@
     <div class="w3-padding w3-col l3">
       <div class="w3-card-4 w3-dark-grey">
         <div class=" w3-center">
-          <img src="{{asset('storage/img/img_avatar3.png')}}" alt="Avatar" style="width:100%">
+          <img src="{{asset('img/img_avatar3.png')}}" alt="Avatar" style="width:100%">
           <div class="text-left w3-container">
             <h5>Desain Poster</h5>
             <p>Rp. 250.000,00</p>
@@ -31,7 +31,7 @@
     <div class="w3-padding w3-col l3">
       <div class="w3-card-4 w3-dark-grey">
         <div class=" w3-center">
-          <img src="{{asset('storage/img/img_avatar3.png')}}" alt="Avatar" style="width:100%">
+          <img src="{{asset('img/img_avatar3.png')}}" alt="Avatar" style="width:100%">
           <div class="text-left w3-container">
             <h5>Desain Poster</h5>
             <p>Rp. 250.000,00</p>
@@ -48,7 +48,7 @@
     <div class="w3-padding w3-col l3">
       <div class="w3-card-4 w3-dark-grey" >
         <div class=" w3-center">
-          <img src="{{asset('storage/img/img_avatar3.png')}}" alt="Avatar" style="width:100%">
+          <img src="{{asset('img/img_avatar3.png')}}" alt="Avatar" style="width:100%">
           <div class="text-left w3-container">
             <h5>Desain Poster</h5>
             <p>Rp. 250.000,00</p>
@@ -65,7 +65,7 @@
     <div class="w3-padding w3-col l3">
       <div class="w3-card-4 w3-dark-grey">
         <div class=" w3-center">
-          <img src="{{asset('storage/img/img_avatar3.png')}}" alt="Avatar" style="width:100%">
+          <img src="{{asset('img/img_avatar3.png')}}" alt="Avatar" style="width:100%">
           <div class="text-left w3-container">
             <h5>Desain Poster</h5>
             <p>Rp. 250.000,00</p>
@@ -82,7 +82,7 @@
     <div class="w3-padding w3-col l3">
       <div class="w3-card-4 w3-dark-grey">
         <div class=" w3-center">
-          <img src="{{asset('storage/img/img_avatar3.png')}}" alt="Avatar" style="width:100%">
+          <img src="{{asset('img/img_avatar3.png')}}" alt="Avatar" style="width:100%">
           <div class="text-left w3-container">
             <h5>Desain Poster</h5>
             <p>Rp. 250.000,00</p>
@@ -99,7 +99,7 @@
     <div class="w3-padding w3-col l3">
       <div class="w3-card-4 w3-dark-grey">
         <div class=" w3-center">
-          <img src="{{asset('storage/img/img_avatar3.png')}}" alt="Avatar" style="width:100%">
+          <img src="{{asset('img/img_avatar3.png')}}" alt="Avatar" style="width:100%">
           <div class="text-left w3-container">
             <h5>Desain Poster</h5>
             <p>Rp. 250.000,00</p>
@@ -116,7 +116,7 @@
     <div class="w3-padding w3-col l3">
       <div class="w3-card-4 w3-dark-grey">
         <div class=" w3-center">
-          <img src="{{asset('storage/img/img_avatar3.png')}}" alt="Avatar" style="width:100%">
+          <img src="{{asset('img/img_avatar3.png')}}" alt="Avatar" style="width:100%">
           <div class="text-left w3-container">
             <h5>Desain Poster</h5>
             <p>Rp. 250.000,00</p>
@@ -133,7 +133,7 @@
     <div class="w3-padding w3-col l3">
       <div class="w3-card-4 w3-dark-grey">
         <div class=" w3-center">
-          <img src="{{asset('storage/img/img_avatar3.png')}}" alt="Avatar" style="width:100%">
+          <img src="{{asset('img/img_avatar3.png')}}" alt="Avatar" style="width:100%">
           <div class="text-left w3-container">
             <h5>Desain Poster</h5>
             <p>Rp. 250.000,00</p>

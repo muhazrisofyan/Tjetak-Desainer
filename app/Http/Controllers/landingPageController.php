@@ -9,8 +9,8 @@ class landingPageController extends Controller
 {
     public function index()
     {
-        $directory = 'public/img/d_produk/';
-        $files = Storage::allFiles($directory);
+        $directory = 'img/d_produk/';
+        $files = Storage::disk('public')->allFiles($directory);
         return view('pages.landingpage',compact('files'));
     }
 }
