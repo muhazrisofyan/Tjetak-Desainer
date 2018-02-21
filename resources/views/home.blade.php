@@ -9,7 +9,7 @@
   </div>
 
   {{-- Job Center boxes --}}
-  <div class="w3-row">
+  <div class="w3-row w3-content" style="width:80%">
     {{-- contoh --}}
     <div class="w3-padding w3-col l3">
       <div class="w3-card-4 w3-dark-grey">
