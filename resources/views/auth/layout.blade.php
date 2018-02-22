@@ -373,7 +373,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tjetak Designer</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/fontawesome-all.css" type="text/css">
     <link rel="stylesheet" href="/css/jobcenter.css">
     <style media="screen">
     html {
@@ -410,6 +410,7 @@
   </head>
   <body>
     {{-- Header --}}
+
     <div id="header" class="w3-top w3-bar w3-white w3-padding-8 w3-border">
       <a href="/"><img class="w3-padding" src="{{asset('img/b_tentang_tjetak_desainer/Logo/logo_tjetak_desainer_x1.png')}}" alt="Logo Tjetak"></a>
       <a class="a-decoration-none c-button" href="#">Job Center</a>
@@ -417,10 +418,10 @@
       <a class="a-decoration-none c-button" href="#">Bantuan</a>
         <!-- Float links to the right. Hide them on small screens -->
         <div class="w3-right w3-hide-medium w3-hide-small">
-          <a class="w3-btn w3-round w3-border c-button w3-small" href="/login">Masuk Sebagai Desainer</a>
-          <a class="w3-btn w3-round w3-blue w3-border c-button w3-small" href="{{ route('logout') }}"
+          <a class="c-button w3-small" href="/login"><i class="far fa-bell" style="font-size:18px"></i></a>
+          <a class="w3-btn w3-circle w3-border c-button w3-small" href="{{ route('logout') }}"
             onclick="event.preventDefault();
-            document.getElementById('logout-form').submit();">Logout</a>
+            document.getElementById('logout-form').submit();"><i class="fas fa-user" style="font-size:18px"></i></a>
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
               {{ csrf_field() }}
           </form>

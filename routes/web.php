@@ -20,3 +20,7 @@ Route::group(['middleware' => 'verified'], function(){
 Auth::routes();
 
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
+
+Route::get('/ubahemail1',function(){
+  return view('ubahemail1');
+});
