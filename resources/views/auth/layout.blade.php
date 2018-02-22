@@ -375,6 +375,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="/css/fontawesome-all.css" type="text/css">
     <link rel="stylesheet" href="/css/jobcenter.css">
+    <link rel="stylesheet" href="/css/emailandpasswordstyle.css" type="text/css">
     <style media="screen">
     html {
       height: 100%;

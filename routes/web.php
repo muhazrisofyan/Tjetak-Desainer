@@ -21,6 +21,20 @@ Auth::routes();
 
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
+
+// untuk email edit
 Route::get('/ubahemail1',function(){
-  return view('ubahemail1');
+  return view('emailedit.ubahemail1');
+});
+Route::get('/ubahemail2',function(){
+  return view('emailedit.ubahemail2');
+});
+Route::get('/ubahemail3',function(){
+  return view('emailedit.ubahemail3');
+});
+Route::get('/ubahpassword1',function(){
+  return view('passwordedit.ubahpassword1');
+});
+Route::get('/ubahpassword2',function(){
+  return view('passwordedit.ubahpassword2');
 });
