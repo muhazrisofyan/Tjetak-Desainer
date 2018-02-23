@@ -46,16 +46,36 @@
     {{-- Header --}}
 
     <div id="header" class="w3-top w3-bar w3-white w3-padding-8 w3-border">
-      <a href="/"><img class="w3-padding" src="{{asset('img/b_tentang_tjetak_desainer/Logo/logo_tjetak_desainer_x1.png')}}" alt="Logo Tjetak"></a>
-      <a class="a-decoration-none c-button" href="#">Job Center</a>
+      <a href="/"><img class="w3-padding"
+        src="{{asset('img/b_tentang_tjetak_desainer/Logo/logo_tjetak_desainer_x1.png')}}"
+        alt="Logo Tjetak"></a>
+      <a class="a-decoration-none c-button" href="home">Job Center</a>
       <a class="a-decoration-none c-button" href="#">Job Saya</a>
       <a class="a-decoration-none c-button" href="#">Bantuan</a>
-        <!-- Float links to the right. Hide them on small screens -->
+
         <div class="w3-right w3-hide-medium w3-hide-small">
-          <a class="c-button w3-small" href="/login"><i class="far fa-bell" style="font-size:18px"></i></a>
-          <a class="w3-btn w3-circle w3-border c-button w3-small" href="{{ route('logout') }}"
-            onclick="event.preventDefault();
-            document.getElementById('logout-form').submit();"><i class="fas fa-user" style="font-size:18px"></i></a>
+
+          {{-- Profile Button --}}
+          <div class="w3-dropdown-click w3-hover-white w3-white w3-right">
+            <button class="w3-btn w3-circle w3-border c-button w3-small"
+              onclick="myFunction()" style="width:39px;">
+              <i class="fas fa-user" style="font-size:18px;margin-left:-6px"></i>
+            </button>
+            <div id="demo" class="w3-dropdown-content w3-bar-block w3-border w3-card" style="position:fixed;margin-left:-100px;margin-top:7px">
+              {{-- Change Profile Information Link --}}
+              <a href="changePassword" class="w3-bar-item w3-button a-decoration-none">Ubah Profil</a>
+              {{-- Log Out Link --}}
+              <a href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();"
+                class="w3-bar-item w3-button a-decoration-none">Keluar
+              </a>
+            </div>
+          </div>
+          {{-- Notification Button --}}
+          <a class="c-button w3-small" href="/login" style="">
+            <i class="far fa-bell" style="font-size:18px;margin-top:10px;"></i>
+          </a>
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
               {{ csrf_field() }}
           </form>
@@ -131,6 +151,14 @@
             x.className = x.className.replace(" w3-show", "");
             bar.classList.remove('fa-times');
             bar.classList.add('fa-bars');
+        }
+    }
+    function myFunction() {
+        var x = document.getElementById("demo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
         }
     }
     </script>

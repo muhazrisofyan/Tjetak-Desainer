@@ -2,13 +2,13 @@
 
 @section('content')
 <div class="w3-row" style="margin-top:80px">
-  <div class="w3-col l3" style="">
-      <div class="w3-border w3-content" style="width:80%;height:87vh">
-          <ul>
-            <li><a href="ubahemail1">ubah email</a></li>
-            <li><a href="ubahpassword1">ubah password</a></li>
-          </ul>
-      </div>
+  <div class="w3-col l3">
+    <div class="w3-bar-block w3-content" style="width:80%">
+      <a href="changeEmail" class="w3-bar-item w3-button w3-hover-sand
+      w3-border-bottom w3-border-top w3-hover-text-orange">Ubah Email</a>
+      <a href="changePassword" class="w3-bar-item w3-button w3-hover-sand
+      w3-border-bottom w3-hover-text-orange">Ubah Password</a>
+    </div>
   </div>
 
   <div class="w3-col l9">
