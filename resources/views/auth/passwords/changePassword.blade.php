@@ -13,7 +13,11 @@
 
   <div class="w3-col l9">
       @if(session()->has('success'))
-        <p>Password berhasil diubah</p>
+        <div class="w3-border" style="width:97%;height:87vh">
+          <h1><i class="far fa-check-circle"></i>Password Berhasil Diubah</h1>
+          <a href="/home">Kembali ke Beranda <i class="fas fa-arrow-right"></i></a>
+          {{-- <a href="#"><i class="fas fa-arrow-right"></i></a> --}}
+        </div>
       @else
         <div class="w3-border" style="width:97%;height:87vh">
             <h2>Ubah Informasi Password</h2>

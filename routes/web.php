@@ -21,10 +21,6 @@ Auth::routes();
 
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
-Route::get('/con',function(){
-  return view('auth.emailConfirmation');
-});
-
 // untuk email edit
 Route::get('/ubahemail1',function(){
   return view('emailedit.ubahemail1');
@@ -40,6 +36,6 @@ Route::get('/changePassword', 'UserController@showChangePasswordForm');
 
 Route::post('/changePassword', 'UserController@changePassword');
 
-Route::get('/ubahpassword2',function(){
-  return view('passwordedit.ubahpassword2');
-});
+Route::get('/changeEmail', 'UserController@showChangePasswordForm');
+
+Route::post('/changeEmail', 'UserController@changePassword');
