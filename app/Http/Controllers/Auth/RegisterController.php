@@ -61,7 +61,7 @@ class RegisterController extends Controller
       $this->validator($request->all())->validate();
       event(new Registered($user = $this->create($request->all())));
       dispatch(new SendVerificationEmail($user));
-      return view('verification');
+      return view('auth.verification');
 
     }
 
@@ -84,7 +84,7 @@ class RegisterController extends Controller
       $user = User::where('email_token',$token)->first();
       $user->verified = 1;
       if($user->save()){
-        return view('emailconfirm',['user'=>$user]);
+        return view('auth.emailConfirmation',['user'=>$user]);
       }
 
     }

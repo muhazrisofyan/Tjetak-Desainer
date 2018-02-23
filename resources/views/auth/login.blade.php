@@ -1,6 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.auth')
 
 @section('content')
+
   <div class="w3-display-middle s-full-box l-third" style="height:auto">
     <h2 class="w3-text-white margin-bottom-min20 ssp-bold">Halo Desainer!</h2>
     <p class="w3-text-white ssp-regular w3-large">Mulai Desain dan raih keuntunganmu.</p>

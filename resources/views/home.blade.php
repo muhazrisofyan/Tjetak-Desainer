@@ -1,4 +1,4 @@
-@extends('auth.layout')
+@extends('layouts.home')
 
 @section('content')
 <div class="" style="margin-top:60px">
