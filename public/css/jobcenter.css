@@ -29,6 +29,14 @@ body {
   bottom: 0;
   left: 0;
 }
+
+a.footerlink:link{
+    color:blue;
+}
+
+a.footerlink:hover{
+    color: black;
+}
 /* End of body and html css  */
 
 
@@ -50,8 +58,17 @@ body {
     margin-right: 20px;
 }
 
+.c-link{
+    text-decoration: none;
+}
+
+
 .text-left{
     text-align: left;
+}
+
+.text-center{
+    text-align: center;
 }
 
 .a-decoration-none{
@@ -76,5 +93,50 @@ body {
 
 
 .width-100{
-  width:100%;
+    width:100%;
+}
+
+/* Change Password css */
+.child-margin-edge > * {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Ubah Informasi Password box css */
+@media screen and (min-width: 769px) {
+    .box-width-normal{
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .box-width-80{
+        width: 80%;
+        margin:auto;
+        margin-top:30px;
+        margin-bottom:80px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .box-width-93{
+        width: 93%;
+    }
+}
+
+/* input box */
+@media screen and (max-width: 768px) {
+    .input-max-width{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .input-min-width{
+        width: 400px;
+    }
+}
+
+.box-height-450{
+    height:450px;
 }
