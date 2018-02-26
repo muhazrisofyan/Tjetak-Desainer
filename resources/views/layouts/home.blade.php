@@ -10,35 +10,6 @@
     <link rel="stylesheet" href="/css/jobcenter.css">
     <link rel="stylesheet" href="/css/emailandpasswordstyle.css" type="text/css">
     <style media="screen">
-    html {
-      height: 100%;
-      box-sizing: border-box;
-    }
-
-    *,
-    *:before,
-    *:after {
-      box-sizing: inherit;
-    }
-
-    body {
-      position: relative;
-      margin: 0;
-      padding-bottom: 6rem;
-      min-height: 100%;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-    }
-
-      /**
-      * Footer Styles
-      */
-
-    .footer {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
     </style>
 
   </head>
@@ -49,9 +20,9 @@
       <a href="/"><img class="w3-padding"
         src="{{asset('img/b_tentang_tjetak_desainer/Logo/logo_tjetak_desainer_x1.png')}}"
         alt="Logo Tjetak"></a>
-      <a class="a-decoration-none c-button" href="home">Job Center</a>
-      <a class="a-decoration-none c-button" href="#">Job Saya</a>
-      <a class="a-decoration-none c-button" href="#">Bantuan</a>
+      <a class="a-decoration-none c-button w3-hide-small w3-hide-medium" href="home">Job Center</a>
+      <a class="a-decoration-none c-button w3-hide-small w3-hide-medium" href="#">Job Saya</a>
+      <a class="a-decoration-none c-button w3-hide-small w3-hide-medium" href="#">Bantuan</a>
 
         <div class="w3-right w3-hide-medium w3-hide-small">
 
@@ -72,27 +43,48 @@
               </a>
             </div>
           </div>
-          {{-- Notification Button --}}
-          <a class="c-button w3-small" href="/login" style="">
-            <i class="far fa-bell" style="font-size:18px;margin-top:10px;"></i>
-          </a>
-          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-              {{ csrf_field() }}
-          </form>
         </div>
 
         {{-- Mobile Dropdown --}}
-        <button onclick="myFunction('mobileNav')" class="c-button-burger w3-right w3-hide-large w3-cell-middle w3-padding-8"><i id="bar" class="w3-xlarge fa fa-bars" aria-hidden="true"></i></button>
+        <button onclick="show('mobileNav')" class="c-button-burger w3-right w3-hide-large w3-cell-middle w3-padding-8"><i id="bar" class="w3-xlarge fa fa-bars" aria-hidden="true"></i></button>
 
         <div id="mobileNav" class="w3-hide w3-margin-top ssp-regular w3-padding w3-hide-large">
           <a href="">
-            <button class="width-100 w3-btn w3-round w3-border w3-small" type="button" name="button">Masuk Sebagai Desainer</button>
+            <button class="width-100 w3-btn w3-round w3-border w3-small"
+              type="button" name="button">Job Center</button>
           </a>
+
           <a href="">
-            <button class="width-100 w3-margin-top w3-btn w3-round w3-blue w3-border w3-small" type="button" name="button">Daftar Sebagai Desainer</button>
+            <button class="width-100 w3-btn w3-round w3-border w3-small"
+              type="button" name="button">Job Saya</button>
+          </a>
+
+          <a href="">
+            <button class="width-100 w3-btn w3-round w3-border w3-small"
+              type="button" name="button">Bantuan</button>
+          </a>
+
+          <a href="">
+            <button class="width-100 w3-btn w3-round w3-border w3-small"
+              type="button" name="button">Ubah Profil</button>
+          </a>
+
+          <a href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();"
+            class="width-100 w3-margin-top w3-btn w3-round w3-orange
+              w3-border w3-small w3-text-white">
+            Keluar
           </a>
         </div>
         {{-- End of Mobile Dropdown --}}
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+        </form>
+        {{-- Notification Button --}}
+        <a class="c-button w3-small w3-right" href="/login" style="">
+          <i class="far fa-bell" style="font-size:18px;margin-top:10px;"></i>
+        </a>
     </div>
 
     {{-- End of Header --}}
@@ -140,7 +132,7 @@
 
     {{-- Header and footer script --}}
     <script>
-    function myFunction(id) {
+    function show(id) {
         var x = document.getElementById(id);
         var bar = document.getElementById("bar");
         if (x.className.indexOf("w3-show") == -1) {

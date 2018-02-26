@@ -1,3 +1,37 @@
+/* body and html css */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #F5F5F5;
+}
+
+  /**
+  * Footer Styles
+  */
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+/* End of body and html css  */
+
+
 #header{
     margin-top:0;
 }
@@ -24,6 +58,23 @@
     text-decoration: none;
 }
 
-ul {
-  list-style-type: none;
+
+/* Button Burger on small screen css */
+.c-button-burger {
+    background-color: Transparent;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+.w3-padding-8{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+/* Button Burger on small screen css end*/
+
+
+.width-100{
+  width:100%;
 }

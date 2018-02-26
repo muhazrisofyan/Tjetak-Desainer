@@ -4,10 +4,14 @@
 <div class="w3-row" style="margin-top:80px">
   <div class="w3-col l3">
     <div class="w3-bar-block w3-content" style="width:80%">
+      {{-- Button Ubah Email --}}
       <a href="changeEmail" class="w3-bar-item w3-button w3-hover-sand
-      w3-border-bottom w3-border-top w3-hover-text-orange">Ubah Email</a>
+        w3-white w3-hover-text-orange w3-text-grey" style="margin-bottom:2px">Ubah Email
+        <i class="fas fa-angle-right w3-right" style="margin-top:4px"></i></a>
+      {{-- Button Ubah Password --}}
       <a href="changePassword" class="w3-bar-item w3-button w3-hover-sand
-      w3-border-bottom w3-hover-text-orange">Ubah Password</a>
+        w3-white w3-hover-text-orange w3-text-grey">Ubah Password
+        <i class="fas fa-angle-right w3-right" style="margin-top:4px"></i></a>
     </div>
   </div>
 
@@ -85,7 +89,7 @@
               {{-- Save Button --}}
               {{csrf_field()}}
               <button class="w3-padding w3-orange w3-hover-opacity w3-round
-                w3-text-white width-100 w3-large" type="submit">Simpan</button>
+                w3-text-white w3-large" type="submit">Simpan</button>
               {{-- Button End --}}
             </form>
 
