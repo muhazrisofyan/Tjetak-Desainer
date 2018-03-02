@@ -85,9 +85,9 @@ a.footerlink:hover{
     outline:none;
 }
 
-.w3-padding-8{
-    padding-top: 6px;
-    padding-bottom: 6px;
+.w3-padding-4{
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 /* Button Burger on small screen css end*/
 
@@ -121,6 +121,21 @@ a.footerlink:hover{
 @media screen and (max-width: 425px) {
     .box-width-93{
         width: 93%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    .box-width-80m{
+        width: 80%;
+        margin:auto;
+        margin-top:30px;
+        margin-bottom:80px;
+    }
+}
+
+@media screen and (min-width: 426px) {
+    .box-width-80p{
+        width: 80%;
     }
 }
 
