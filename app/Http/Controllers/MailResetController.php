@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use MailReset;
 use App\User;
+use App\Mail_reset_user;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Kaoken\LaravelMailReset\Controllers\MailResetUsers;
@@ -20,12 +21,22 @@ class MailResetController extends Controller
   protected $broker = 'users';
 
   /**
+   * Create a new controller instance.
+   *
+   * @return void
+   */
+  public function __construct()
+  {
+      $this->middleware('auth');
+  }
+
+  /**
   * Mail address change view
   * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
   */
   public function getChangeMail()
   {
-    return view('change_email');
+    return view('auth.email.changeEmail');
   }
 
   /**
@@ -35,18 +46,19 @@ class MailResetController extends Controller
   */
   public function postChangeMail(Request $request)
   {
+    // dd($request);
     $all = $request->only(['email']);
     $validator = Validator::make($all,[
         'email' => 'required|unique:users,email|max:255|email',
     ]);
 
     if ($validator->fails()) {
-        return redirect('change_email')
+        return redirect('changeEmail')
             ->withErrors($validator)
             ->withInput();
     }
 
-    switch ( $this->sendMailAddressChangeLink(Auth::guard('customer')->user()->id, $all['email']) ) {
+    switch ( $this->sendMailAddressChangeLink(Auth::user()->id, $all['email']) ) {
         case MailReset::INVALID_USER:
             redirect('first_register')
                 ->withErrors(['mail_reset'=>'Invalid user.']);
@@ -61,5 +73,16 @@ class MailResetController extends Controller
                 ->withErrors(['mail_reset'=>'An unexpected error occurred.']);
     }
     return redirect('change_email_ok');
+  }
+
+  public function getChangeMailAddress($token){
+    $mailReset = Mail_reset_user::where('token', $token)->first();
+    $user = User::find($mailReset->id);
+    $user->email = $mailReset->email;
+    $user->save();
+
+    Mail_reset_user::where('token', $token)->delete();
+
+    echo "success";
   }
 }
