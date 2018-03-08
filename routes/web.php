@@ -36,6 +36,12 @@ Route::get('/changePassword', 'UserController@showChangePasswordForm');
 
 Route::post('/changePassword', 'UserController@changePassword');
 
-Route::get('/changeEmail', 'UserController@showChangePasswordForm');
+// Route::get('/changeEmail', 'UserController@showChangePasswordForm');
+//
+// Route::post('/changeEmail', 'UserController@changePassword');
 
-Route::post('/changeEmail', 'UserController@changePassword');
+Route::get('changeEmail', 'MailResetController@getChangeMail');
+
+Route::post('changeEmail', 'MailResetController@postChangeMail');
+
+Route::get('changeEmail/{token}', 'MailResetController@getChangeMailAddress');

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb13913620747be7eeba1a0b0dd0e4ff",
+    "content-hash": "8935cf753aec1cbedeef362bf3e9346d",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -586,6 +586,48 @@
                 }
             ],
             "time": "2015-04-20T18:58:01+00:00"
+        },
+        {
+            "name": "kaoken/laravel-email-reset",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kaoken/laravel-email-reset.git",
+                "reference": "df4f68ad6789ac685adb9e4a7946eceefd0443cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kaoken/laravel-email-reset/zipball/df4f68ad6789ac685adb9e4a7946eceefd0443cf",
+                "reference": "df4f68ad6789ac685adb9e4a7946eceefd0443cf",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.5.*",
+                "php": ">=7.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kaoken\\LaravelMailReset\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "kaoken",
+                    "homepage": "https://github.com/kaoken/laravel-email-reset"
+                }
+            ],
+            "description": "Request to change the e-mail address of the Auth user, change it after moving to the specified URL of the confirmation e-mail.",
+            "homepage": "https://github.com/kaoken/laravel-email-reset",
+            "keywords": [
+                "laravel",
+                "laravel-email-reset"
+            ],
+            "time": "2018-01-09T09:28:48+00:00"
         },
         {
             "name": "laravel/framework",

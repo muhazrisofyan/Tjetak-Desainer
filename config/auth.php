@@ -16,6 +16,7 @@ return [
     'defaults' => [
         'guard' => 'web',
         'passwords' => 'users',
+        'email_reset' => 'users',
     ],
 
     /*
@@ -97,6 +98,15 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
         ],
+    ],
+
+    'email_resets' => [
+        'users' => [
+            'model' => App\User::class,
+            'email_reset' => Kaoken\LaravelMailReset\Mail\MailResetConfirmationToUser::class,
+            'table' => 'mail_reset_users',
+            'expire' => 1,
+        ]
     ],
 
 ];
