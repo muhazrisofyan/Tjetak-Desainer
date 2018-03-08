@@ -61,18 +61,18 @@ class MailResetController extends Controller
     switch ( $this->sendMailAddressChangeLink(Auth::user()->id, $all['email']) ) {
         case MailReset::INVALID_USER:
             redirect('first_register')
-                ->withErrors(['mail_reset'=>'Invalid user.']);
+                ->withErrors(['mail_reset'=>'User tidak dikenal.']);
             break;
         case MailReset::SAME_EMAIL_EXIST:
             redirect('first_register')
-                ->withErrors(['mail_reset'=>'The same mail address already exists.']);
+                ->withErrors(['mail_reset'=>'Sudah ada akun yang terdaftar dengan e-mail tersebut.']);
             break;
         case MailReset::INVALID_CONFIRMATION:
         default:
             redirect('first_register')
-                ->withErrors(['mail_reset'=>'An unexpected error occurred.']);
+                ->withErrors(['mail_reset'=>'Terjadi error yang tidak diinginkan.']);
     }
-    return redirect('change_email_ok');
+    return redirect()->back()->with('success', 'Sebuah email konfirmasi telah dikirim ke email lama anda, silahkan cek email untuk melanjutkan.');
   }
 
   public function getChangeMailAddress($token){
