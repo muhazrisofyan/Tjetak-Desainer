@@ -23,7 +23,6 @@
           box-width-80m child-margin-edge w3-round w3-card-2 box-height-450">
           <h1 class="w3-text-orange"><i class="far fa-check-circle"></i>Password Berhasil Diubah</h1>
           <a href="/home">Kembali ke Beranda <i class="fas fa-arrow-right"></i></a>
-          {{-- <a href="#"><i class="fas fa-arrow-right"></i></a> --}}
         </div>
       @else
         <div class="w3-border box-width-80 box-width-normal box-width-93 w3-white child-margin-edge w3-round w3-card-2 box-height-450">
