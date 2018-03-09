@@ -34,7 +34,7 @@
             </button>
             <div id="demo" class="w3-dropdown-content w3-bar-block w3-border w3-card" style="position:fixed;margin-left:-100px;margin-top:7px">
               {{-- Change Profile Information Link --}}
-              <a href="changePassword" class="w3-bar-item w3-button a-decoration-none">Ubah Profil</a>
+              <a href="changeEmail" class="w3-bar-item w3-button a-decoration-none">Ubah Informasi Profil</a>
               {{-- Log Out Link --}}
               <a href="{{ route('logout') }}"
                 onclick="event.preventDefault();
@@ -46,27 +46,35 @@
         </div>
 
         {{-- Mobile Dropdown --}}
-        <button onclick="show('mobileNav')" class="c-button-burger w3-right w3-hide-large w3-cell-middle w3-padding-8"><i id="bar" class="w3-xlarge fa fa-bars" aria-hidden="true"></i></button>
 
+        {{-- Button Bar --}}
+        <button onclick="show('mobileNav')" class="c-button-burger w3-right w3-hide-large w3-cell-middle w3-padding-8">
+          <i id="bar" class="w3-xlarge fa fa-bars" aria-hidden="true"></i></button>
+
+        {{-- Notification Button --}}
+        <a class="c-button w3-small w3-right" href="/login" style="">
+          <i class="far fa-bell" style="font-size:18px;margin-top:10px;"></i>
+        </a>
+        {{-- Dropdown Navigation --}}
         <div id="mobileNav" class="w3-hide w3-margin-top ssp-regular w3-padding w3-hide-large">
-          <a href="">
-            <button class="width-100 w3-btn w3-round w3-border w3-small"
+          <a href="/home">
+            <button class="width-100 w3-padding w3-round w3-hover-sand w3-border w3-small"
               type="button" name="button">Job Center</button>
           </a>
 
           <a href="">
-            <button class="width-100 w3-btn w3-round w3-border w3-small"
+            <button class="width-100 w3-padding w3-round w3-hover-sand w3-border w3-small"
               type="button" name="button">Job Saya</button>
           </a>
 
           <a href="">
-            <button class="width-100 w3-btn w3-round w3-border w3-small"
+            <button class="width-100 w3-padding w3-round w3-hover-sand w3-border w3-small"
               type="button" name="button">Bantuan</button>
           </a>
 
-          <a href="">
-            <button class="width-100 w3-btn w3-round w3-border w3-small"
-              type="button" name="button">Ubah Profil</button>
+          <a href="/changeEmail">
+            <button class="width-100 w3-padding w3-round w3-hover-sand w3-border w3-small"
+              type="button" name="button">Ubah Informasi Profil</button>
           </a>
 
           <a href="{{ route('logout') }}"
@@ -81,10 +89,7 @@
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             {{ csrf_field() }}
         </form>
-        {{-- Notification Button --}}
-        <a class="c-button w3-small w3-right" href="/login" style="">
-          <i class="far fa-bell" style="font-size:18px;margin-top:10px;"></i>
-        </a>
+
     </div>
 
     {{-- End of Header --}}

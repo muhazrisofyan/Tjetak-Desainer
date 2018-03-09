@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="w3-row" style="margin-top:80px">
+  
   {{-- Box ubah email and ubah password --}}
   <div class="w3-col l3">
     <div class="w3-bar-block w3-content box-width-93 box-width-80p">

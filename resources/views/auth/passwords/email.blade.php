@@ -1,10 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="w3-display-middle s-full-box l-third" style="height:auto">
-    <h2 class="w3-text-white margin-bottom-min20 ssp-bold">Halo Desainer!</h2>
-    <p class="w3-text-white ssp-regular w3-large">Reset Password</p>
-    <p class="w3-text-white ssp-regular w3-large margin-top-min20">Masukan Email Anda</p>
+  {{-- Box ubah email and ubah password --}}
+  <div class="w3-col l3">
+    <div class="w3-bar-block w3-content box-width-93 box-width-80p">
+      {{-- Button Ubah Email --}}
+      <a href="changeEmail" class="w3-bar-item w3-button w3-hover-sand
+        w3-white w3-hover-text-orange w3-text-grey" style="margin-bottom:2px">Ubah Email
+        <i class="fas fa-angle-right w3-right" style="margin-top:4px"></i></a>
+      {{-- Button Ubah Password --}}
+      <a href="changePassword" class="w3-bar-item w3-button w3-hover-sand
+        w3-white w3-hover-text-orange w3-text-grey">Ubah Password
+        <i class="fas fa-angle-right w3-right" style="margin-top:4px"></i></a>
+    </div>
+  </div>
 
     {{-- White Div containing username and password --}}
 
