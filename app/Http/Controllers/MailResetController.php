@@ -83,6 +83,10 @@ class MailResetController extends Controller
 
     Mail_reset_user::where('token', $token)->delete();
 
-    echo "success";
+    return redirect('/emailChanged')->with('changed', 'Email berhasil diubah');
+  }
+
+  public function mailChanged(){
+    return view('auth.email.changeEmail');
   }
 }

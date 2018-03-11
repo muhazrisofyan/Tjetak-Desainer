@@ -19,35 +19,16 @@
 
 
   <div class="w3-col l9">
-    <form class="" action="/changeEmail" method="POST">
-      <div class="w3-border box-width-80 box-width-normal box-width-93 w3-white child-margin-edge w3-round w3-card-2 box-height-450">
 
-        <h2 class="w3-text-orange">Ubah Informasi Email</h2>
-        <hr>
-
-        @if (count($errors) > 0)
-          {{$errors}}
-        @endif
-
-        {{-- Masukkan Email baru box --}}
-        <div class="w3-padding-8 box w3-round">
-            <i class="fas fa-lock w3-small"></i>
-            {{-- input box --}}
-            <input class="input-max-width input-min-width" name="email" type="email"
-              placeholder="Masukkan email baru"
-              onblur="cek(this.id , this.value)" onkeyup="cek(this.id , this.value)">
-            {{-- End of input box --}}
-        </div>
-
-        {{csrf_field()}}
-
-        <button class="w3-padding w3-orange w3-hover-opacity w3-round
-          w3-text-white w3-large" type="submit" style="margin-top:40px">Verifikasi Email</button>
-      </div>
-    </form> --}}
     @if(session()->has('success'))
       <div class="w3-border box-width-80 box-width-normal box-width-93 w3-white child-margin-edge w3-round w3-card-2 box-height-450">
         <h1 class="w3-text-orange"><i class="far fa-check-circle"></i>Sebuah email konfirmasi telah dikirim ke email lama anda, silahkan cek email untuk melanjutkan.</h1>
+        <a href="/home">Kembali ke Beranda <i class="fas fa-arrow-right"></i></a>
+        {{-- <a href="#"><i class="fas fa-arrow-right"></i></a> --}}
+      </div>
+    @elseif (session()->has('changed'))
+      <div class="w3-border box-width-80 box-width-normal box-width-93 w3-white child-margin-edge w3-round w3-card-2 box-height-450">
+        <h1 class="w3-text-orange"><i class="far fa-check-circle"></i>Email berhasil diubah</h1>
         <a href="/home">Kembali ke Beranda <i class="fas fa-arrow-right"></i></a>
         {{-- <a href="#"><i class="fas fa-arrow-right"></i></a> --}}
       </div>
@@ -57,11 +38,11 @@
           <hr>
 
           <form class="" action="/changeEmail" method="POST">
-            {{-- Masukkan password lama box --}}
+            {{-- Masukkan password baru box --}}
             <div class="w3-padding-8 box w3-round">
                 <i class="fas fa-envelope w3-small"></i>
                 {{-- input box --}}
-                <input class="input-max-width input-min-width" id="current-password" type="email" name="email" required
+                <input class="input-max-width input-min-width" id="email" type="email" name="email" required
                   placeholder="Masukkan email baru"
                   onblur="cek(this.id , this.value)" onkeyup="cek(this.id , this.value)">
                 {{-- End of input box --}}

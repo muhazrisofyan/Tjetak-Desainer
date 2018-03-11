@@ -21,17 +21,6 @@ Auth::routes();
 
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
-// untuk email edit
-Route::get('/ubahemail1',function(){
-  return view('emailedit.ubahemail1');
-});
-Route::get('/ubahemail2',function(){
-  return view('emailedit.ubahemail2');
-});
-Route::get('/ubahemail3',function(){
-  return view('emailedit.ubahemail3');
-});
-
 Route::get('/changePassword', 'UserController@showChangePasswordForm');
 
 Route::post('/changePassword', 'UserController@changePassword');
@@ -45,3 +34,5 @@ Route::get('changeEmail', 'MailResetController@getChangeMail');
 Route::post('changeEmail', 'MailResetController@postChangeMail');
 
 Route::get('changeEmail/{token}', 'MailResetController@getChangeMailAddress');
+
+Route::get('emailChanged', 'MailResetController@mailChanged');
