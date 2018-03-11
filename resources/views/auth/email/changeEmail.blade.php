@@ -21,24 +21,44 @@
   <div class="w3-col l9">
 
     @if(session()->has('success'))
-      <div class="w3-border box-width-80 box-width-normal box-width-93 w3-white child-margin-edge w3-round w3-card-2 box-height-450">
-        <h1 class="w3-text-orange"><i class="far fa-check-circle"></i>Sebuah email konfirmasi telah dikirim ke email lama anda, silahkan cek email untuk melanjutkan.</h1>
-        <a href="/home">Kembali ke Beranda <i class="fas fa-arrow-right"></i></a>
-        {{-- <a href="#"><i class="fas fa-arrow-right"></i></a> --}}
+      <div class="w3-border box-width-80 box-width-normal box-width-93 w3-white child-margin-edge w3-round w3-card-2 padding-bottom">
+        <h2 class="w3-text-orange">Ubah Informasi Email</h2>
+        <hr>
+        <p>Link verfikasi sudah dikirimkan ke email baru Anda. Silahkan melakukan verifikasi
+        dengan mengklik link yang sudah dikirimkan.</p>
+        {{-- Email lama input box --}}
+        <div class="w3-padding-8 box w3-round">
+            <i class="fas fa-envelope w3-small"></i>
+            {{-- input box --}}
+            <input class="input-max-width input-min-width w3-light-grey" id="email" type="email" name="emailLama"
+              placeholder="{{Auth::user()->email}}" disabled>
+            {{-- End of input box --}}
+        </div>
       </div>
     @elseif (session()->has('changed'))
-      <div class="w3-border box-width-80 box-width-normal box-width-93 w3-white child-margin-edge w3-round w3-card-2 box-height-450">
-        <h1 class="w3-text-orange"><i class="far fa-check-circle"></i>Email berhasil diubah</h1>
+      <div class="w3-border box-width-80 box-width-normal box-width-93 w3-white child-margin-edge w3-round w3-card-2 padding-bottom">
+        <h1 class="w3-text-orange"><i class="far fa-check-circle"></i> Email berhasil diubah</h1>
         <a href="/home">Kembali ke Beranda <i class="fas fa-arrow-right"></i></a>
         {{-- <a href="#"><i class="fas fa-arrow-right"></i></a> --}}
       </div>
     @else
-      <div class="w3-border box-width-80 box-width-normal box-width-93 w3-white child-margin-edge w3-round w3-card-2 box-height-450">
+      <div class="w3-border box-width-80 box-width-normal box-width-93 w3-white child-margin-edge w3-round w3-card-2 padding-bottom">
           <h2 class="w3-text-orange">Ubah Informasi Email</h2>
           <hr>
 
           <form class="" action="/changeEmail" method="POST">
-            {{-- Masukkan password baru box --}}
+
+            <label for="emailLama" class="w3-text-grey"><strong>Email Lama</strong></label>
+            {{-- Email lama input box --}}
+            <div class="w3-padding-8 box w3-round">
+                <i class="fas fa-envelope w3-small"></i>
+                {{-- input box --}}
+                <input class="input-max-width input-min-width w3-light-grey" id="email" type="email" name="emailLama"
+                  placeholder="{{Auth::user()->email}}" disabled>
+                {{-- End of input box --}}
+            </div>
+            <label for="emailLama" class="w3-text-grey"><strong>Email Baru</strong></label>
+            {{-- Email baru input box --}}
             <div class="w3-padding-8 box w3-round">
                 <i class="fas fa-envelope w3-small"></i>
                 {{-- input box --}}
@@ -49,7 +69,7 @@
 
                 {{-- div for warning text --}}
                 @if ($errors->has('email'))
-                  <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
+                  <div class="w3-small w3-text-pink width-100" style="text-align:left">
                       <strong>{{ $errors->first('email') }}</strong>
                   </div>
                 @endif

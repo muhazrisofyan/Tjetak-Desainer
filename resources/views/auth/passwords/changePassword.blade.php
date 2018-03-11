@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="w3-row" style="margin-top:80px">
-  
+
   {{-- Box ubah email and ubah password --}}
   <div class="w3-col l3">
     <div class="w3-bar-block w3-content box-width-93 box-width-80p">
@@ -20,16 +20,17 @@
   <div class="w3-col l9">
       @if(session()->has('success'))
         <div class="w3-border box-width-80 box-width-normal box-width-93 w3-white
-          box-width-80m child-margin-edge w3-round w3-card-2 box-height-450">
-          <h1 class="w3-text-orange"><i class="far fa-check-circle"></i>Password Berhasil Diubah</h1>
+          box-width-80m child-margin-edge w3-round w3-card-2 padding-bottom">
+          <h1 class="w3-text-orange"><i class="far fa-check-circle"></i> Password Berhasil Diubah</h1>
           <a href="/home">Kembali ke Beranda <i class="fas fa-arrow-right"></i></a>
         </div>
       @else
-        <div class="w3-border box-width-80 box-width-normal box-width-93 w3-white child-margin-edge w3-round w3-card-2 box-height-450">
+        <div class="w3-border box-width-80 box-width-normal box-width-93 w3-white child-margin-edge w3-round w3-card-2 padding-bottom">
             <h2 class="w3-text-orange">Ubah Informasi Password</h2>
             <hr>
 
             <form class="" action="/changePassword" method="POST">
+              <label class="w3-text-grey"><strong>Password Lama</strong></label>
               {{-- Masukkan password lama box --}}
               <div class="w3-padding-8 box w3-round">
                   <i class="fas fa-lock w3-small"></i>
@@ -37,18 +38,19 @@
                   <input class="input-max-width input-min-width" id="current-password" type="password" name="current-password" required
                     placeholder="Masukkan password lama"
                     onblur="cek(this.id , this.value)" onkeyup="cek(this.id , this.value)">
+                  <div class="w3-small w3-text-red width-100" style="text-align:left"></div>
                   {{-- End of input box --}}
 
                   {{-- div for warning text --}}
                   @if ($errors->has('current-password'))
-                    <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
+                    <div class="w3-small w3-text-pink width-100" style="text-align:left">
                         <strong>{{ $errors->first('current-password') }}</strong>
                     </div>
                   @endif
               </div>
               {{-- End of box --}}
 
-
+              <label class="w3-text-grey"><strong>Password Baru</strong></label>
               {{-- Masukkan password baru box --}}
               <div class="w3-padding-8 box w3-round">
                   <i class="fas fa-lock w3-small"></i>
@@ -56,17 +58,19 @@
                   <input class="input-max-width input-min-width" id="new-password" type="password" name="new-password" required
                     placeholder="Masukkan password baru"
                     onblur="cek(this.id , this.value)" onkeyup="cek(this.id , this.value)">
+                  <div class="w3-small w3-text-red width-100" style="text-align:left"></div>
                   {{-- End of input box --}}
 
                   {{-- div for warning text --}}
                   @if ($errors->has('new-password'))
-                    <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
+                    <div class="w3-small w3-text-red width-100" style="text-align:left">
                         <strong>{{ $errors->first('new-password') }}</strong>
                     </div>
                   @endif
               </div>
               {{-- End of box --}}
 
+              <label class="w3-text-grey"><strong>Konfirmasi Password</strong></label>
               {{-- Konfirmasi password baru box --}}
               <div class="w3-padding-8 box w3-round">
                   <i class="fas fa-lock w3-small"></i>
@@ -75,14 +79,8 @@
                     name="new-password_confirmation" required
                     placeholder="Konfirmasi password baru"
                     onblur="cek(this.id , this.value)" onkeyup="cek(this.id , this.value)">
+                  <div class="w3-small w3-text-red width-100" style="text-align:left"></div>
                   {{-- End of input box --}}
-
-                  {{-- div for warning text --}}
-                  @if ($errors->has('new-password'))
-                    <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
-                        <strong>{{ $errors->first('new-password') }}</strong>
-                    </div>
-                  @endif
               </div>
               {{-- End of box --}}
 

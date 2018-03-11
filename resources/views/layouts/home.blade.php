@@ -20,9 +20,12 @@
       <a href="/"><img class="w3-padding"
         src="{{asset('img/b_tentang_tjetak_desainer/Logo/logo_tjetak_desainer_x1.png')}}"
         alt="Logo Tjetak"></a>
-      <a class="a-decoration-none c-button w3-hide-small w3-hide-medium" href="home">Job Center</a>
-      <a class="a-decoration-none c-button w3-hide-small w3-hide-medium" href="#">Job Saya</a>
-      <a class="a-decoration-none c-button w3-hide-small w3-hide-medium" href="#">Bantuan</a>
+      <a class="a-decoration-none c-button w3-hide-small w3-hide-medium
+        w3-text-grey w3-hover-text-orange" href="home">Job Center</a>
+      <a class="a-decoration-none c-button w3-hide-small w3-hide-medium
+        w3-text-grey w3-hover-text-orange" href="#">Job Saya</a>
+      <a class="a-decoration-none c-button w3-hide-small w3-hide-medium
+        w3-text-grey w3-hover-text-orange" href="#">Bantuan</a>
 
         <div class="w3-right w3-hide-medium w3-hide-small">
 
@@ -48,8 +51,10 @@
         {{-- Mobile Dropdown --}}
 
         {{-- Button Bar --}}
-        <button onclick="show('mobileNav')" class="c-button-burger w3-right w3-hide-large w3-cell-middle w3-padding-8">
-          <i id="bar" class="w3-xlarge fa fa-bars" aria-hidden="true"></i></button>
+
+        <button onclick="show('mobileNav')" class="c-button-burger w3-right
+          w3-hide-large w3-cell-middle w3-padding-8" style="width:20px;padding-right:35px">
+          <i id="bar" class="w3-xlarge fa fa-bars" aria-hidden="true" ></i></button>
 
         {{-- Notification Button --}}
         <a class="c-button w3-small w3-right" href="/login" style="">
@@ -159,6 +164,8 @@
         }
     }
     </script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/master.js') }}"></script>
     {{-- End of Script --}}
   </body>
 </html>

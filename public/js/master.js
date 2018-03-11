@@ -6,7 +6,7 @@ function cek(id, value) {
       document.getElementById(id).classList.remove("w3-border-red");
     }
     else {
-      document.getElementById(id).nextElementSibling.innerHTML = " Field " + id + " wajib diisi";
+      document.getElementById(id).nextElementSibling.innerHTML = "Kolom wajib diisi";
       document.getElementById(id).classList.add("w3-border-red");
     }
 
