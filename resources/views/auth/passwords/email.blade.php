@@ -1,23 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.auth')
 
 @section('content')
-  {{-- Box ubah email and ubah password --}}
-  <div class="w3-col l3">
-    <div class="w3-bar-block w3-content box-width-93 box-width-80p">
-      {{-- Button Ubah Email --}}
-      <a href="changeEmail" class="w3-bar-item w3-button w3-hover-sand
-        w3-white w3-hover-text-orange w3-text-grey" style="margin-bottom:2px">Ubah Email
-        <i class="fas fa-angle-right w3-right" style="margin-top:4px"></i></a>
-      {{-- Button Ubah Password --}}
-      <a href="changePassword" class="w3-bar-item w3-button w3-hover-sand
-        w3-white w3-hover-text-orange w3-text-grey">Ubah Password
-        <i class="fas fa-angle-right w3-right" style="margin-top:4px"></i></a>
-    </div>
-  </div>
-
     {{-- White Div containing username and password --}}
 
-    <div class="w3-center w3-padding-large w3-white w3-round-large w3-border ssp-regular" style="width:100%;height:auto;">
+    <div class="w3-display-middle s-full-box l-third" style="height:auto">
+      <p class="w3-text-white ssp-regular w3-large" style="text-align:center">Masukkan email lama anda</p>
+      <div class="w3-center w3-padding-large w3-white w3-round-large w3-border ssp-regular" style="width:100%;height:auto;">
       <form method="POST" action="{{ route('password.email')}}">
         {{ csrf_field() }}
         {{-- email --}}
