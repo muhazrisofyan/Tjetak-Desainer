@@ -24,7 +24,7 @@
       <div class="w3-border box-width-80 box-width-normal box-width-93 w3-white child-margin-edge w3-round w3-card-2 padding-bottom">
         <h2 class="w3-text-orange">Ubah Informasi Email</h2>
         <hr>
-        <p>Link verfikasi sudah dikirimkan ke email baru Anda. Silahkan melakukan verifikasi
+        <p>Link verfikasi sudah dikirimkan ke email lama Anda. Silahkan melakukan verifikasi
         dengan mengklik link yang sudah dikirimkan.</p>
         {{-- Email lama input box --}}
         <div class="w3-padding-8 box w3-round">
