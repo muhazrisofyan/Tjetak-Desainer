@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Email / password tidak sesuai!',
+    'failed' => 'Data yang dimasukkan tidak sesuai. Mohon periksa kembali.',
     'throttle' => 'Terlalu banyak percobaan login. Silahkan coba lagi dalam :seconds detik.',
 
 ];
