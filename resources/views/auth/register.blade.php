@@ -17,11 +17,6 @@
           <input id="user" type="text"  class="width-100" placeholder="Nama Lengkap" name="name" value="{{ old('name') }}" required autofocus onblur="cek(this.id , this.value)" onkeyup="cek(this.id , this.value)">
           {{-- div for warning text --}}
           <div class="w3-small w3-text-red width-100" style="text-align:left"></div>
-          @if ($errors->has('email'))
-            <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
-                <strong>{{ $errors->first('email') }}</strong>
-            </div>
-          @endif
         </div>
 
         {{-- User Email --}}
@@ -32,7 +27,7 @@
           <div class="w3-small w3-text-red width-100" style="text-align:left"></div>
           @if ($errors->has('email'))
 
-              <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
+              <div class="w3-small w3-text-red width-100" style="text-align:left">
                   <strong>{{ $errors->first('email') }}</strong>
               </div>
           @endif
@@ -45,7 +40,7 @@
           {{-- div for warning text --}}
           <div class="w3-small w3-text-red width-100" style="text-align:left"></div>
           @if ($errors->has('phone'))
-              <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
+              <div class="w3-small w3-text-red width-100" style="text-align:left">
                   <strong>{{ $errors->first('phone') }}</strong>
               </div>
           @endif
@@ -58,8 +53,8 @@
           {{-- div for warning text --}}
           <div class="w3-small w3-text-red width-100" style="text-align:left"></div>
           @if ($errors->has('password'))
-              <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
-                  <strong>{{ $errors->first('password') }}</strong>
+              <div class="w3-small w3-text-red width-100" style="text-align:left">
+                  <strong>{{ ucfirst($errors->first('password')) }}</strong>
               </div>
           @endif
         </div>
