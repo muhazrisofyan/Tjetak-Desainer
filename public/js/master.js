@@ -8,6 +8,7 @@ function cek(id, value) {
     else {
       document.getElementById(id).nextElementSibling.innerHTML = "Kolom wajib diisi";
       document.getElementById(id).classList.add("w3-border-red");
+      document.getElementById(id).nextElementSibling.nextElementSibling.innerHTML = "";
     }
 
 }
