@@ -16,9 +16,9 @@
 
           </div>
           @if ($errors->has('email'))
-              <span class="help-block">
-                  <strong>{{ $errors->first('email') }}</strong>
-              </span>
+              <div class="w3-small w3-text-red width-100" style="text-align:left">
+                <strong>{{ $errors->first('email') }}</strong>
+              </div>
           @endif
         </div>
         <hr>
