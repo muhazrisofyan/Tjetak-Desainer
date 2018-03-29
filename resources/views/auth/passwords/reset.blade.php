@@ -17,7 +17,7 @@
           <div class="w3-small w3-text-red width-100" style="text-align:left"></div>
           @if ($errors->has('email'))
 
-              <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
+              <div class="w3-small w3-text-red width-100" style="text-align:left">
                   <strong>{{ $errors->first('email') }}</strong>
               </div>
           @endif
@@ -31,7 +31,7 @@
           <div class="w3-small w3-text-red width-100" style="text-align:left"></div>
           @if ($errors->has('password'))
 
-              <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
+              <div class="w3-small w3-text-red width-100" style="text-align:left">
                   <strong>{{ $errors->first('password') }}</strong>
               </div>
           @endif
@@ -43,12 +43,7 @@
           <i class="fas fa-lock w3-small"></i>
           <input id="password-confirm" type="password" name="password_confirmation" required class="width-100" placeholder="New Password Confirmation" onblur="cek(this.id , this.value)" onkeyup="cek(this.id , this.value)">
           <div class="w3-small w3-text-red width-100" style="text-align:left"></div>
-          @if ($errors->has('password'))
-
-              <div class="w3-small w3-text-red w3-center width-100" style="text-align:left">
-                  <strong>{{ $errors->first('password') }}</strong>
-              </div>
-          @endif
+          
 
         </div>
         <hr>
