@@ -14,7 +14,7 @@
   {{-- End of Banner --}}
 
   {{-- Tentang Tjetak Desainer --}}
-  <div class="w3-border w3-container w3-display-container w3-round w3-row w3-white w3-responsive w3-card-4" style="margin:3%">
+  <div class="w3-border w3-container w3-display-container w3-round w3-row w3-white w3-responsive w3-card-2" style="margin:3%">
     <div class="w3-col m7 l9">
       <h4 class="ssp-regular w3-text-grey">Tentang</h4>
       <h1 class="ssp-bold w3-text-orange c-text-bold margin-top-min20">TJETAK DESAINER</h1>
@@ -30,7 +30,7 @@
   {{-- End of Tentang Tjetak Desainer --}}
 
   {{-- Cara Kerja --}}
-  <div class="w3-border w3-container w3-display-container w3-round w3-row w3-white w3-responsive w3-card-4" style="margin:3%">
+  <div class="w3-border w3-container w3-display-container w3-round w3-row w3-white w3-responsive w3-card-2" style="margin:3%">
     <h4 class="ssp-regular w3-text-grey">Cara Kerja</h4>
     <h1 class="ssp-bold w3-text-orange c-text-bold margin-top-min20">TJETAK DESAINER</h1>
     <div class="ssp-regular w3-row">
@@ -51,7 +51,7 @@
   {{-- End of Cara Kerja --}}
 
   {{-- Produk --}}
-  <div class="w3-border w3-container w3-round w3-row w3-white w3-responsive w3-card-4" style="margin:3%">
+  <div class="w3-border w3-container w3-round w3-row w3-white w3-responsive w3-card-2" style="margin:3%">
     <h4 class="ssp-regular w3-text-grey">Desain untuk</h4>
     <h1 class="ssp-bold w3-text-orange c-text-bold margin-top-min20">PRODUK-PRODUK</h1>
     <div class="ssp-regular w3-row">
@@ -75,7 +75,7 @@
   {{-- End of Produk --}}
 
   {{-- Keuntungan --}}
-  <div class="w3-border w3-container w3-round w3-row w3-white w3-card-4" style="margin:3%">
+  <div class="w3-border w3-container w3-round w3-row w3-white w3-card-2" style="margin:3%">
     <h4 class="ssp-regular w3-text-grey">Keuntungan</h4>
     <h1 class="ssp-bold w3-text-orange c-text-bold margin-top-min20">TJETAK DESAINER</h1>
     <div class="w3-row width-100 w3-padding">
