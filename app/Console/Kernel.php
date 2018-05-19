@@ -28,7 +28,6 @@ class Kernel extends ConsoleKernel
         //          ->hourly();
 
         $schedule->call(function(){
-            MailReset::broker('users')->deleteUserAndToken();
           }
         )->hourly();
     }
