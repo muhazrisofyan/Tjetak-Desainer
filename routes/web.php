@@ -15,6 +15,9 @@ Route::get('/','landingPageController@index');
 
 Route::group(['middleware' => 'verified'], function(){
   Route::get('/home', 'HomeController@index');
+  Route::get('/myjob', 'HomeController@myjob');
+  Route::get('/jobdetail', 'HomeController@jobdetail');
+  Route::get('/myjobdetail', 'HomeController@myjobdetail');
 });
 
 Auth::routes();

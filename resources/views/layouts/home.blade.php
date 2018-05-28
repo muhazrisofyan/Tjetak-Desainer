@@ -21,9 +21,9 @@
         src="{{asset('img/b_tentang_tjetak_desainer/Logo/logo_tjetak_desainer_x1.png')}}"
         alt="Logo Tjetak"></a>
       <a class="a-decoration-none c-button w3-hide-small w3-hide-medium
-        w3-text-grey w3-hover-text-orange" href="home">Job Center</a>
+        w3-text-grey w3-hover-text-orange" href="/home">Job Center</a>
       <a class="a-decoration-none c-button w3-hide-small w3-hide-medium
-        w3-text-grey w3-hover-text-orange" href="#">Job Saya</a>
+        w3-text-grey w3-hover-text-orange" href="/myjob">Job Saya</a>
       <a class="a-decoration-none c-button w3-hide-small w3-hide-medium
         w3-text-grey w3-hover-text-orange" href="#">Bantuan</a>
 
