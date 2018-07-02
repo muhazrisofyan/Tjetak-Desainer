@@ -28,6 +28,7 @@ class HomeController extends Controller
     {
       $jobs = Design_job::all();
         return view('job.home', compact('jobs'));
+
     }
 
     public function myjob()
