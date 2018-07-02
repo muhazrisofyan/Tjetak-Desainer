@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\Design_job;
 
 class HomeController extends Controller
 {
@@ -14,6 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+
         $this->middleware('auth');
     }
 
@@ -24,12 +26,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('job.home');
+      $jobs = Design_job::all();
+        return view('job.home', compact('jobs'));
     }
 
     public function myjob()
     {
-        return view('job.myjob');
+      $id = Auth::user()->id;
+      $myJobs = Design_job::where('user_id', $id)->get();
+        return view('job.myjob', compact('myJobs'));
     }
 
     public function jobDetail()
